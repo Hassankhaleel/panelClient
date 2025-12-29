@@ -1,118 +1,116 @@
-import React from 'react'
-import CheckoutStepper from './CheckoutStepper'
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  increment25,
+  decrement25,
+  increment20,
+  decrement20,
+  selectSolarPricing,
+} from "../../redux/slices/solarSlice.js";
+
+const PRICE_25 = 149;
+const PRICE_20 = 129;
 
 function LeftSidePanel() {
-    return (
-        <>
-            <CheckoutStepper />
-            <div style={{ fontFamily: 'Poppins' }} className="grid grid-cols-12  m-5">
-                <div class="col-span-8  border-2 border-[#b8b8b870] rounded-[10px] p-5 ">
-                    {/* MAIN HEADING  */}
-                    <h1 className='text-xl font-medium' >Configure Your Solar System</h1>
-                    <p className='font-extralight text-[13px] pb-3'>Choose the number of panel and warranty option that fit your need.</p>
-                    {/* div 1 start */}
-                    <div className='border-2 p-4 mt-5 border-[#b8b8b870] rounded-[10px] flex justify-center items-start'>
-                        <div >
-                            <i className="fa-solid fa-fire-flame-simple "></i>
-                        </div>
-                        <div>
-                            <h6 className=''>Enery Saving Await!</h6>
-                            <p className='font-extralight text-[12px]'>Energy Savings Await! With only a < span className='font-medium'> 10% deposit</span>,you can reserve your panels and start your path to energy savings. Don't wait secure your spot today!</p>
-                        </div>
+  const dispatch = useDispatch();
+  const { p25, p20, subtotal } = useSelector(selectSolarPricing);
 
-                    </div>
-                    {/* div 1 end */}
-                    {/* =============================================== */}
-                    {/* div 2 start */}
-                    <div className='border-2 p-4 mt-5 border-[#b8b8b870] rounded-[10px] '>
-                        <div className='flex justify-between items-center mb-5'>
-                            <div className='flex justify-center items-start flex-col'>
-                                <div className='flex justify-start items-start'>
-                                    <p>25 Year Warranty</p>
-                                    <span className='bg-[#020641] px-2 py-1  mx-2 rounded text-white text-[10px]'>RECOMMENDED</span>
-                                </div>
-                                <div>
-                                    <p className='text-[12px] font-extralight'>Premium panels with extended warranty</p>
-                                </div>
-                            </div>
-                            <p className='font-extralight text-[12px]'>149$ per panel</p>
-                        </div>
-                        <div className='flex justify-between items-center '>
-                            <div className=" flex justify-center items-center gap-10">
-                                <div className='bg-gray-50 px-2 py-1 rounded border-2 border-[#b8b8b870]'>
-                                    <i class="fa-solid fa-plus text-[12px]"></i>
-                                </div>
-                                <div className='bg flex flex-col items-center justify-center'>
-                                    <h6 className='font-medium'>10</h6>
-                                    <p className='text-[10px] font-light'>panels</p>
-                                </div>
-                                <div className='bg-gray-50 px-2 py-1 rounded border-2 border-[#b8b8b870]'>
-                                    <i class="fa-solid fa-minus text-[12px]"></i>
-                                </div>
-                            </div>
-                            <div className=''>
-                                <p className='font-medium text-[17px]'>$1490.00</p>
-                            </div>
-                        </div>
+  return (
+    <>
+      <div
+        style={{ fontFamily: "Poppins" }}
+        className="w-full px-3 md:px-6 py-4"
+      >
+        <div className="max-w-5xl bg-white border border-gray-200 rounded-xl p-4 md:p-6">
 
-                    </div>
-                    {/* div 1 end */}
-                    {/*================================================= */}
-                    {/* Div 3 start */}
-                    <div className='border-2 p-4 mt-5 border-[#b8b8b870] rounded-[10px] '>
-                        <div className='flex justify-between items-center mb-5'>
-                            <div className='flex justify-center items-start flex-col'>
-                                <div className='flex justify-start items-start'>
-                                    <p>25 Year Warranty</p>
+          <h1 className="text-lg md:text-xl font-semibold text-slate-900">
+            Configure Your Solar System
+          </h1>
+          <p className="text-xs md:text-sm text-slate-600 pb-4">
+            Choose the number of panels and warranty options that fit your needs.
+          </p>
 
-                                </div>
-                                <div>
-                                    <p className='text-[12px] font-extralight'>Standard panels with quality assurance</p>
-                                </div>
-                            </div>
-                            <p className='font-extralight text-[12px]'>129$ per panel</p>
-                        </div>
-                        <div className='flex justify-between items-center '>
-                            <div className=" flex justify-center items-center gap-10">
-                                <div className='bg-gray-50 px-2 py-1 rounded border-2 border-[#b8b8b870]'>
-                                    <i class="fa-solid fa-plus text-[12px]"></i>
-                                </div>
-                                <div className='bg flex flex-col items-center justify-center'>
-                                    <h6 className='font-medium'>0</h6>
-                                    <p className='text-[10px] font-light'>panels</p>
-                                </div>
-                                <div className='bg-gray-50 px-2 py-1 rounded border-2 border-[#b8b8b870]'>
-                                    <i class="fa-solid fa-minus text-[12px]"></i>
-                                </div>
-                            </div>
-                            <div className=''>
-                                <p className='font-medium text-[17px]'>$0.00</p>
-                            </div>
-                        </div>
+          <div className="flex gap-3 bg-slate-50 border border-gray-200 rounded-lg p-3 md:p-4 mt-4">
+            <i className="fa-solid fa-fire-flame-simple text-indigo-600 mt-1" />
+            <div>
+              <h6 className="font-medium text-slate-800">Energy Savings Await!</h6>
+              <p className="text-xs md:text-sm text-slate-600">
+                With only a <span className="font-medium">10% deposit</span>, you can reserve your panels and start your path to energy savings.
+              </p>
+            </div>
+          </div>
 
-                    </div>
-                    {/* Div 3 end */}
-                    {/* ================================================= */}
-                    <div className='border-2 p-4 mt-5 border-[#b8b8b870] rounded-[10px] flex justify-center items-start'>
-                        <div >
-                            <i class="fa-solid fa-circle-exclamation opacity-50 "></i>
-                        </div>
-                        <div>
-                            <p className='font-extralight text-[12px]'>
-                                **127 panels is enough to zero the average Australian home energy bill based on Constanblue research June 2025. The GST is part of the total and inclusive in the price.
-                            </p>
-                        </div>
-
-                    </div>
-                    <div className=' mt-4  flex justify-end items-center'>
-                        <button className='p-3 m-2 text-white bg-[#00043a] '>Continue shopping</button>
-                    </div>
+  
+          <div className="border border-gray-200 rounded-lg p-4 mt-5">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-4">
+              <div>
+                <div className="flex items-center gap-2">
+                  <p className="font-medium">25 Year Warranty</p>
+                  <span className="bg-indigo-700 text-white text-[10px] px-2 py-0.5 rounded">RECOMMENDED</span>
                 </div>
-
+                <p className="text-xs text-slate-600">Premium panels with extended warranty</p>
+              </div>
+              <p className="text-xs text-slate-600">$149 per panel</p>
             </div>
 
-        </>
-    )
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-6">
+                <button onClick={() => dispatch(increment25())} className="px-2 py-1 border rounded bg-slate-50">
+                  <i className="fa-solid fa-plus text-xs" />
+                </button>
+
+                <div className="text-center">
+                  <h6 className="font-medium">{p25}</h6>
+                  <p className="text-[10px] text-slate-500">panels</p>
+                </div>
+
+                <button onClick={() => dispatch(decrement25())} className="px-2 py-1 border rounded bg-slate-50">
+                  <i className="fa-solid fa-minus text-xs" />
+                </button>
+              </div>
+
+              <p className="font-semibold text-slate-900">${(p25 * PRICE_25).toFixed(2)}</p>
+            </div>
+          </div>
+
+     
+          <div className="border border-gray-200 rounded-lg p-4 mt-5">
+            <div className="flex justify-between items-center mb-4">
+              <div>
+                <p className="font-medium">20 Year Warranty</p>
+                <p className="text-xs text-slate-600">Standard panels with quality assurance</p>
+              </div>
+              <p className="text-xs text-slate-600">$129 per panel</p>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-6">
+                <button onClick={() => dispatch(increment20())} className="px-2 py-1 border rounded bg-slate-50">
+                  <i className="fa-solid fa-plus text-xs" />
+                </button>
+
+                <div className="text-center">
+                  <h6 className="font-medium">{p20}</h6>
+                  <p className="text-[10px] text-slate-500">panels</p>
+                </div>
+
+                <button onClick={() => dispatch(decrement20())} className="px-2 py-1 border rounded bg-slate-50">
+                  <i className="fa-solid fa-minus text-xs" />
+                </button>
+              </div>
+
+              <p className="font-semibold text-slate-900">${(p20 * PRICE_20).toFixed(2)}</p>
+            </div>
+          </div>
+
+          <div className="flex gap-3 border border-gray-200 rounded-lg p-3 mt-5 text-xs text-slate-600">
+            <i className="fa-solid fa-circle-exclamation opacity-50 mt-0.5" />
+            <p>127 panels are enough to zero the average Australian home energy bill. GST is included in the total price.</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default LeftSidePanel
+export default LeftSidePanel;
