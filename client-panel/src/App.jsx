@@ -1,10 +1,11 @@
 import React from 'react'
+import LeftSidePanel from './components/LeftBar/LeftSidePanel'
 
 const App = () => {
   return (
-    <div>
-      <h2 className='font-bold'>hehe</h2>
-    </div>
+    <>
+      <LeftSidePanel />
+    </>
   )
 }
 
