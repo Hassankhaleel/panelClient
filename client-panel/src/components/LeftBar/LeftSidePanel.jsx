@@ -17,10 +17,7 @@ function LeftSidePanel() {
 
   return (
     <>
-      <div
-        style={{ fontFamily: "Poppins" }}
-        className="w-full px-3 md:px-6 py-4"
-      >
+      <div style={{ fontFamily: "Poppins" }} className="w-full px-3 md:px-6 py-4">
         <div className="max-w-5xl bg-white border border-gray-200 rounded-xl p-4 md:p-6">
 
           <h1 className="text-lg md:text-xl font-semibold text-slate-900">
@@ -40,7 +37,7 @@ function LeftSidePanel() {
             </div>
           </div>
 
-  
+          {/* 25 YEAR WARRANTY */}
           <div className="border border-gray-200 rounded-lg p-4 mt-5">
             <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-4">
               <div>
@@ -73,7 +70,7 @@ function LeftSidePanel() {
             </div>
           </div>
 
-     
+          {/* 20 YEAR WARRANTY */}
           <div className="border border-gray-200 rounded-lg p-4 mt-5">
             <div className="flex justify-between items-center mb-4">
               <div>
@@ -103,10 +100,27 @@ function LeftSidePanel() {
             </div>
           </div>
 
+          {/* INFO BOX */}
           <div className="flex gap-3 border border-gray-200 rounded-lg p-3 mt-5 text-xs text-slate-600">
             <i className="fa-solid fa-circle-exclamation opacity-50 mt-0.5" />
             <p>127 panels are enough to zero the average Australian home energy bill. GST is included in the total price.</p>
           </div>
+
+          {/* BUTTON ROW */}
+        <div className="flex justify-end items-center mt-5">
+        <button
+            className="
+            px-5 py-2
+            bg-indigo-700
+            text-white
+            rounded-md
+            text-sm
+            hover:bg-indigo-800
+            "
+        >
+            Continue to Shipping
+        </button>
+        </div>
         </div>
       </div>
     </>
