@@ -2,7 +2,7 @@ import React from 'react'
 
 const PayToday = () => {
   return (
-    <div className='bg-indigo-50 border border-indigo-200 p-4 rounded-lg'>
+    <div className='bg-indigo-50 border border-indigo-200 p-3 rounded-lg'>
       <h1 className='text-indigo-700 font-medium'>
         Pay Today (10%)
       </h1>
