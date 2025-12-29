@@ -14,7 +14,6 @@ const CheckoutStepper = () => {
             <div className="flex items-center justify-center max-w-full md:max-w-lg mx-auto px-2 sm:px-4">
                 {steps.map((step, index) => (
                     <React.Fragment key={step.id}>
-                        {/* Step Circle */}
                         <div className="flex flex-col items-center relative">
                             <div
                                 className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 flex items-center justify-center text-[10px] sm:text-sm md:text-lg transition-colors duration-300 ${
@@ -35,8 +34,6 @@ const CheckoutStepper = () => {
                                 {step.label}
                             </span>
                         </div>
-
-                        {/* Line Between Steps */}
                         {index !== steps.length - 1 && (
                             <div className="flex-1 h-[2px] bg-slate-200 mx-2 sm:mx-3 md:mx-4 mb-0" />
                         )}
