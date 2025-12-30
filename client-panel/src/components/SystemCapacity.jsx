@@ -5,7 +5,7 @@ const SystemCapacity = () => {
   return (
     <div className='bg-slate-50 border border-gray-200 p-4 rounded-lg'>
       <div className='flex items-center gap-2 text-slate-600'>
-        <RxLightningBolt className="text-indigo-500" />
+        <RxLightningBolt className="text-[#E9A837]" />
         <h1 className='font-medium'>System Capacity</h1>
       </div>
 

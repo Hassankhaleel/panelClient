@@ -6,10 +6,18 @@ const PayToday = () => {
   const { payToday, remaining } = useSelector(selectSolarPricing);
 
   return (
-    <div className="bg-indigo-50 border border-indigo-200 p-3 rounded-lg">
-      <h1 className="text-indigo-700 font-medium">Pay Today (10%)</h1>
-      <h1 className="text-2xl font-bold text-indigo-900 mt-1">${payToday.toFixed(2)}</h1>
-      <p className="text-sm text-indigo-700">Remaining ${remaining.toFixed(2)} due at installation</p>
+    <div className="bg-[#E9A837]/10 border border-[#E9A837] p-3 rounded-lg">
+      <h1 className="text-[#E9A837] font-medium">
+        Pay Today (10%)
+      </h1>
+
+      <h1 className="text-2xl font-bold text-[#E9A837] mt-1">
+        ${payToday.toFixed(2)}
+      </h1>
+
+      <p className="text-sm text-[#E9A837]">
+        Remaining ${remaining.toFixed(2)} due at installation
+      </p>
     </div>
   );
 };

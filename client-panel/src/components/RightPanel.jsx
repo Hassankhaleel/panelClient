@@ -20,7 +20,7 @@ const RightPanel = () => {
 
       {/* HEADER */}
       <div className="p-3 md:p-4 border-b flex items-center gap-2">
-        <AiOutlineShoppingCart className="text-indigo-500" />
+        <AiOutlineShoppingCart className="text-[#E9A837]" />
         <h1 className="font-semibold text-sm md:text-base">
           Order Summary
         </h1>
