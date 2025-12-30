@@ -28,7 +28,7 @@ function LeftSidePanel() {
           </p>
 
           <div className="flex gap-3 bg-slate-50 border border-gray-200 rounded-lg p-3 md:p-4 mt-4">
-            <i className="fa-solid fa-fire-flame-simple text-indigo-600 mt-1" />
+            <i className="fa-solid fa-fire-flame-simple text-[#E9A837] mt-1" />
             <div>
               <h6 className="font-medium text-slate-800">Energy Savings Await!</h6>
               <p className="text-xs md:text-sm text-slate-600">
@@ -43,7 +43,7 @@ function LeftSidePanel() {
               <div>
                 <div className="flex items-center gap-2">
                   <p className="font-medium">25 Year Warranty</p>
-                  <span className="bg-indigo-700 text-white text-[10px] px-2 py-0.5 rounded">RECOMMENDED</span>
+                  <span className="bg-[#E9A837] text-white text-[10px] px-2 py-0.5 rounded">RECOMMENDED</span>
                 </div>
                 <p className="text-xs text-slate-600">Premium panels with extended warranty</p>
               </div>
@@ -111,11 +111,11 @@ function LeftSidePanel() {
         <button
             className="
             px-5 py-2
-            bg-indigo-700
+            bg-[#E9A837]
             text-white
             rounded-md
             text-sm
-            hover:bg-indigo-800
+            hover:bg-[#E9A837]
             "
         >
             Continue to Shipping
